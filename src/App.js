@@ -1,14 +1,25 @@
 import React from "react";
+import PostForm from "./Components/PostForm";
+import Posts from "./Components/Posts";
+import FetchedPosts from "./Components/FetchedPosts";
 
 function App() {
   return (
     <div className="container pt-3">
-      <h1>React redux</h1>
       <div className="row">
-        <div className="col">FORM</div>
+        <div className="col">
+          <PostForm />
+        </div>
       </div>
       <div className="row">
-        <div className="col">FETCHED POSTS</div>
+        <div className="col">
+          <h2>Синхронні пости</h2>
+          <Posts posts={[]} />
+        </div>
+        <div className="col">
+          <h2>Асинхронні пости</h2>
+          <FetchedPosts posts={[]} />
+        </div>
       </div>
     </div>
   );
